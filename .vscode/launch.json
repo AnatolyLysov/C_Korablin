@@ -8,7 +8,7 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/a.out", // Path to the compiled binary
+            "program": "${workspaceFolder}/main${cwd}.out", // Path to the compiled binary
             "args": [], // Arguments to pass to the program
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
