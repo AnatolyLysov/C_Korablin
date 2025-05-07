@@ -1,0 +1,10 @@
+To run main.c, follow these steps:
+
+Compile the code: Use a C compiler like gcc to compile the file. 
+Open the terminal in Visual Studio Code and run: gcc -o main main.c
+
+This will create an executable file named main.
+
+Run the executable: Execute the compiled program by running: ./main
+
+Make sure you are in the directory containing main.c when running these commands.
