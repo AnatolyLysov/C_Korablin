@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
 	int K1=5;
 	long long K2=3LL;
 	double k3=.4;
+	printf("K1=%d K2=%lld k3=%lf\n",K1,K2,k3);
 	
 	 
 	
