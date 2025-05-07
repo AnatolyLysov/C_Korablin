@@ -1,0 +1,60 @@
+Here are the main gcc (GNU Compiler Collection) commands used for compiling C programs:
+Basic Commands
+1.	Compile a C file:
+gcc file.c -o output
+Compiles file.c into an executable named output.
+2.	Compile and run in one step:
+gcc file.c -o output && ./output
+Compiles file.c and runs the resulting executable.
+3.	Compile multiple files:
+gcc file1.c file2.c -o output
+Combines file1.c and file2.c into a single executable named output.
+4.	Compile without linking:
+gcc -c file.c
+Produces an object file (file.o) without creating an executable.
+5.	Link object files:
+gcc file1.o file2.o -o output
+Links multiple object files into a single executable.
+Debugging
+6.	Enable debugging information:
+gcc -g file.c -o output
+Compiles with debugging symbols for use with tools like gdb.
+Optimization
+7.	Optimize the code:
+gcc -O2 file.c -o output
+Enables optimization for better performance. Levels include -O1, -O2, -O3, and -Os (optimize for size).
+Warnings
+8.	Enable all warnings:
+gcc -Wall file.c -o output
+Shows all common warnings during compilation.
+9.	Treat warnings as errors:
+gcc -Werror file.c -o output
+Treats all warnings as errors, stopping compilation.
+Standard Selection
+10.	Specify the C standard:
+gcc -std=c99 file.c -o output
+Compiles using a specific C standard (e.g., c89, c99, c11).
+Preprocessing
+11.	Generate preprocessed output:
+gcc -E file.c -o file.i
+Outputs the preprocessed code.
+Assembly
+12.	Generate assembly code:
+gcc -S file.c
+Produces an assembly file (file.s).
+Miscellaneous
+13.	Show version:
+gcc --version
+14.	Link with libraries:
+gcc file.c -o output -lm
+Links with the math library (-lm) or other libraries as needed.
+These commands cover most common use cases for gcc. Let me know if you need help with a specific scenario!
+
+
+gcc source_file.c                      # Compile source_file.c into an executable named a.out (default)
+gcc -c source_file.c                   # Compile source_file.c into an object file (source_file.o)
+gcc -Wall -o output_file source_file.c # Compile with all warnings enabled
+gcc -g -o output_file source_file.c    # Compile with debugging information
+gcc -O2 -o output_file source_file.c   # Compile with optimization level 2
+gcc -I/path/to/include -o output_file source_file.c # Include additional header file paths
+gcc -L/path/to/lib -l<library> -o output_file source_file.c # Link with additional libraries
