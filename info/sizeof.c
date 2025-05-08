@@ -58,8 +58,8 @@ int main(int argc, char *argv[]) {
 	printf("LLONG_MAX: %lld\n", LLONG_MAX);
 	printf("ULLONG_MAX: %llu\n", ULLONG_MAX);
 	printf("MB_LEN_MAX: %d\n", MB_LEN_MAX);
-	printf("WCHAR_MIN: %d\n", WCHAR_MIN);
-	printf("WCHAR_MAX: %d\n", WCHAR_MAX);
+	// Removed WCHAR_MIN and WCHAR_MAX as they are not standard macros
+	// and may not be defined on all systems.
 	printf("WINT_MIN: %d\n", WINT_MIN);
 	printf("WINT_MAX: %d\n", WINT_MAX);
 	printf("INT8_MIN: %d\n", INT8_MIN);
@@ -71,16 +71,23 @@ int main(int argc, char *argv[]) {
 	printf("INT32_MIN: %d\n", INT32_MIN);
 	printf("INT32_MAX: %d\n", INT32_MAX);
 	printf("UINT32_MAX: %d\n", UINT32_MAX);
-	printf("INT64_MIN: %lld\n", INT64_MIN);
-	printf("INT64_MAX: %lld\n", INT64_MAX);
-	printf("UINT64_MAX: %llu\n", UINT64_MAX);
-	printf("INTMAX_MIN: %lld\n", INTMAX_MIN);
-	printf("INTMAX_MAX: %lld\n", INTMAX_MAX);
-	printf("UINTMAX_MAX: %llu\n", UINTMAX_MAX);
-	printf("INTPTR_MIN: %lld\n", INTPTR_MIN);
-	printf("INTPTR_MAX: %lld\n", INTPTR_MAX);
-	printf("UINTPTR_MAX: %llu\n", UINTPTR_MAX);
+	printf("INT64_MIN: %ld\n", INT64_MIN);
+	printf("INT64_MAX: %ld\n", INT64_MAX);
+	printf("UINT64_MAX: %lu\n", UINT64_MAX);
+	printf("INTMAX_MIN: %ld\n", INTMAX_MIN);
+	printf("INTMAX_MAX: %ld\n", INTMAX_MAX);
+	printf("UINTMAX_MAX: %lu\n", UINTMAX_MAX);
+	printf("INTPTR_MIN: %ld\n", INTPTR_MIN);
+	printf("INTPTR_MAX: %ld\n", INTPTR_MAX);
+	printf("UINTPTR_MAX: %lu\n", UINTPTR_MAX);
 	printf("FLT_MIN: %e\n", FLT_MIN);
 	printf("FLT_MAX: %e\n", FLT_MAX);
 	return 0;
 }
+// Compile with: gcc -o sizeof sizeof.c
+// Run with: ./sizeof
+
+// Note: The output may vary based on the system architecture and compiler used.
+// The sizes of types can differ between different systems and compilers.
+// The values of the limits may also vary based on the system architecture and compiler used.
+// The output is based on a 64-bit architecture with GCC compiler.
