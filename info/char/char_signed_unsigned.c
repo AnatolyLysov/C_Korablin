@@ -47,3 +47,42 @@ Use signed char when you need to store small negative and positive values.
 Use unsigned char when you need to store only non-negative values or when working 
 with raw binary data (e.g., file I/O, image processing).*/
 
+/*
+In C, the bit representation of a signed char depends on the system's representation of signed integers, which is typically two's complement. Let's break it down:
+
+Key Points:
+A signed char typically uses 8 bits (1 byte).
+In two's complement:
+The most significant bit (MSB) is the sign bit:
+0 for positive numbers.
+1 for negative numbers.
+Negative numbers are represented by inverting all the bits of the absolute value and adding 1.
+For s_ch = -1:
+The absolute value of 1 in binary (8 bits) is:
+
+00000001
+
+Invert all bits:
+
+11111110
+
+Add 1 to the inverted bits:
+
+11111110 + 1 = 11111111
+
+Thus, the bit representation of s_ch = -1 is:
+
+11111111
+
+Verification:
+
+If you interpret 11111111 as a signed 8-bit integer:
+The MSB is 1, so it's negative.
+To find the value, invert the bits and add 1:
+
+Invert: 00000000
+Add 1: 00000001
+
+Result: -1.
+This confirms that 11111111 correctly represents -1 in two's complement.
+*/
