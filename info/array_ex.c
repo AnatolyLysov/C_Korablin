@@ -1,12 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
-#include <stddef.h>
-#include <wctype.h>
-#include <stdint.h>
-#include <float.h>
-
-
 int main(int argc, char *argv[]) {
 	int array[100];
 	int *ptr = array;
