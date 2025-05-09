@@ -1,23 +1,12 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
-#include <stddef.h>
-#include <wctype.h>
-#include <stdint.h>
-#include <float.h>
 
 
 int main(int argc, char *argv[]) {
-	int array[100];
-	int *ptr = array;
-	int i;
-	for (i = 0; i < 100; i++) {
-		ptr[i] = i;
-	}
-	for (i = 0; i < 100; i++) {
-		printf("%d ", ptr[i]);
-	}
-	printf("\n");
-	
+	unsigned char ch;
+	ch = 'а';
+	printf("Size of ch: %zu bytes\n", sizeof(ch));
+	printf("Character representation of ch: %c\n", ch);
+	printf("Unsigned integer representation of ch: %u\n", ch);
+	printf("Value of ch: %u\n", ch);
 	return 0;
 }
